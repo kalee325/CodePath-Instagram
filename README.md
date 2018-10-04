@@ -12,9 +12,9 @@ The following **required** functionality is completed:
 - [x] User can log in and log out of his or her account (+1pt)
 - [x] The current signed in user is persisted across app restarts (+1pt)
 - [x] User can take a photo, add a caption, and post it to "Instagram" (+2pt)
-- [ ] User can view the last 20 posts submitted to "Instagram" (+2pt)
-- [ ] User can pull to refresh the last 20 posts submitted to "Instagram" (+1pt)
-- [ ] User can tap a post to view post details, including timestamp and caption (+2pt)
+- [x] User can view the last 20 posts submitted to "Instagram" (+2pt)
+- [x] User can pull to refresh the last 20 posts submitted to "Instagram" (+1pt)
+- [x] User can tap a post to view post details, including timestamp and caption (+2pt)
 
 The following **stretch** features are implemented:
 
@@ -39,7 +39,7 @@ The following **additional** features are implemented:
 
 - [x] List anything else that you can get done to improve the app functionality!
 
-   Display empty username and password alert
+   Display empty username and password alert and existed user alert
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
@@ -50,7 +50,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/LNRr1N4.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/yP3Dwcm.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -64,8 +64,6 @@ List an 3rd party libraries, icons, graphics, or other assets you used in your a
 ## Notes
 
 Describe any challenges encountered while building the app.
-
-I really had a hard time doing this project since it does not have any further videos to help me understand how to build the app. Therefore, I am screwed up with this one
 
 ## License
 
