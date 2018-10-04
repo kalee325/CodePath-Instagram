@@ -12,13 +12,22 @@ import ParseUI
 
 class HomeFeedCell: UITableViewCell {
 
-
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    @IBOutlet weak var timePostLabel: UILabel!
+    
     @IBOutlet weak var feedImageView: PFImageView!
     
     @IBOutlet weak var commentLabel: UILabel!
     
     var post: PFObject! {
         didSet {
+            
+            usernameLabel.text = (post["author"] as! PFUser).username
+            
+            if let timepassed = (post.createdAt) {
+                timePostLabel.text = timepassed.timeAgo()
+            }
             
             feedImageView.file = post["media"] as? PFFile
             self.feedImageView.loadInBackground()

@@ -24,10 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.initialize(
             with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
                 configuration.applicationId = "Instagram"
-                configuration.clientKey = "kdsagcxzbngjdiquwejhfakhdhdjskahdcbzewqoi"  // set to nil assuming you have not set clientKey
-                configuration.server = "https://aqueous-caverns-41555.herokuapp.com/parse"
+                configuration.clientKey = "ajkfdakhvcjqiurhfjadhkfjkdahfmkcoqie"  // set to nil assuming you have not set clientKey
+                configuration.server = "https://quiet-lake-75001.herokuapp.com/parse"
             })
         )
+        
         if let currentUser = PFUser.current() {
             print("Welcome back \(currentUser.username!) 😀")
             // TODO: Load Chat view controller and set as root view controller

@@ -32,12 +32,20 @@ class LoginViewController: UIViewController {
     func displayEmptyAlert(){
         let alertController = UIAlertController(title: "Empty Username or Password", message: "Please enter your username and password", preferredStyle: .alert)
         
-        // create a cancel action
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
-            // handle cancel response here. Doing nothing will dismiss the view.
+        // create an OK action
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            // handle response here.
         }
-        // add the cancel action to the alertController
-        alertController.addAction(cancelAction)
+        // add the OK action to the alert controller
+        alertController.addAction(OKAction)
+        
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    func displayExistAlert(){
+        let alertController = UIAlertController(title: "User already existed", message: "Please enter a valid username", preferredStyle: .alert)
         
         // create an OK action
         let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
@@ -80,6 +88,14 @@ class LoginViewController: UIViewController {
             if let error = error {
                 if (newUser.username?.isEmpty)! || (newUser.password?.isEmpty)!{
                     self.displayEmptyAlert()
+                }
+                switch error._code{
+                case 202:
+                    self.displayExistAlert()
+                    break
+                    
+                default:
+                    break
                 }
                 print("User register failed: \(error.localizedDescription)")
             } else {
